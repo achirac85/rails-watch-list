@@ -1,0 +1,11 @@
+<h1><%= @movie.title %></h1>
+<p><%= @movie.overview %></p>
+<p>Rating: <%= @movie.rating %></p>
+<img src="<%= @movie.poster_url %>" alt="<%= @movie.title %> Poster" />
+
+<div>
+  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
+  <%= link_to "Back to movies", movies_path %>
+
+  <%= button_to "Destroy this movie", @movie, method: :delete %>
+</div>
